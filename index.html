@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pillar Quest: Menjelajah Rukun Islam!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Audio Elements -->
+    <audio id="bg-music" loop>
+        <source src="assets/audio/background-music.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <audio id="button-sound">
+        <source src="assets/audio/button-click.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <audio id="success-sound">
+        <source src="assets/audio/success.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <audio id="error-sound">
+        <source src="assets/audio/error.mp3" type="audio/mpeg">
+        Browser Anda tidak mendukung elemen audio.
+    </audio>
+    
+    <!-- Audio Controls -->
+    <div class="audio-controls">
+        <button class="audio-btn" id="music-toggle">🔊</button>
+        <input type="range" class="volume-slider" id="volume-slider" min="0" max="100" value="30">
+    </div>
+    
+    <div class="container">
+        <!-- Halaman Menu Utama -->
+        <div id="home-page" class="page active">
+            <div class="header">
+                <div class="logo">🕌</div>
+                <h1>Pillar Quest: Menjelajah Rukun Islam!</h1>
+                <p class="subtitle">Belajar Rukun Islam dengan Cara Menyenangkan</p>
+            </div>
+            
+            <div class="menu-grid">
+                <div class="menu-btn" data-page="materi-page">
+                    <div class="menu-icon">📘</div>
+                    <h3>Materi Rukun Islam</h3>
+                    <p>Pelajari 5 Rukun Islam dengan penjelasan lengkap</p>
+                </div>
+                
+                <div class="menu-btn" data-page="matching-page">
+                    <div class="menu-icon">🧩</div>
+                    <h3>Game Matching</h3>
+                    <p>Cocokkan nama Rukun Islam dengan penjelasannya</p>
+                </div>
+                
+                <div class="menu-btn" data-page="scramble-page">
+                    <div class="menu-icon">🔤</div>
+                    <h3>Scramble Game</h3>
+                    <p>Susun huruf acak menjadi nama Rukun Islam</p>
+                </div>
+                
+                <div class="menu-btn" data-page="competition-page">
+                    <div class="menu-icon">🏆</div>
+                    <h3>Kuis Kompetisi</h3>
+                    <p>Bermain bersama teman dengan sistem tarik tambang</p>
+                </div>
+                
+                <div class="menu-btn" data-page="quiz-page">
+                    <div class="menu-icon">📝</div>
+                    <h3>Latihan Soal</h3>
+                    <p>Uji pengetahuanmu dengan soal-soal menarik</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Halaman Materi Rukun Islam -->
+        <div id="materi-page" class="page">
+            <div class="header">
+                <h2>Materi Rukun Islam</h2>
+                <p>Pelajari 5 Rukun Islam dengan penjelasan singkat</p>
+            </div>
+            
+            <div class="pillar-cards">
+                <div class="pillar-card">
+                    <div class="pillar-number">1</div>
+                    <h3>Syhadat</h3>
+                    <p>Mengucapkan dua kalimat syahadat: "Asyhadu an laa ilaaha illallaah, wa asyhadu anna muhammadan rasuulullaah" yang artinya "Aku bersaksi bahwa tidak ada Tuhan selain Allah, dan aku bersaksi bahwa Muhammad adalah utusan Allah".</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-number">2</div>
+                    <h3>Shalat</h3>
+                    <p>Menunaikan shalat lima waktu sehari semalam: Subuh, Dzuhur, Ashar, Maghrib, dan Isya. Shalat adalah tiang agama dan merupakan ibadah langsung kepada Allah.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-number">3</div>
+                    <h3>Zakat</h3>
+                    <p>Mengeluarkan zakat harta bagi yang mampu. Zakat bertujuan untuk membersihkan harta dan membantu sesama muslim yang membutuhkan.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-number">4</div>
+                    <h3>Puasa</h3>
+                    <p>Berpuasa di bulan Ramadhan selama satu bulan penuh. Puasa dimulai dari terbit fajar hingga terbenam matahari dengan menahan diri dari makan, minum, dan hal-hal yang membatalkan puasa.</p>
+                </div>
+                
+                <div class="pillar-card">
+                    <div class="pillar-number">5</div>
+                    <h3>Haji</h3>
+                    <p>Menunaikan ibadah haji ke Baitullah di Mekah bagi yang mampu secara fisik dan finansial. Haji dilaksanakan setidaknya sekali seumur hidup.</p>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-primary" data-page="home-page">🔙 Kembali ke Menu</button>
+                <button class="btn btn-secondary" data-page="matching-page">🧩 Main Game Matching</button>
+                <button class="btn btn-secondary" data-page="competition-page">🏆 Kuis Kompetisi</button>
+            </div>
+        </div>
+        
+        <!-- Halaman Game Matching -->
+        <div id="matching-page" class="page">
+            <div class="header">
+                <h2>Game Matching</h2>
+                <p>Cocokkan Rukun Islam dengan penjelasannya!</p>
+            </div>
+            
+            <div class="matching-game">
+                <div class="matching-item" style="background-color: var(--light-blue);" data-target="penjelasan1">
+                    <h3>Syhadat</h3>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-green);" id="penjelasan1">
+                    <p>Mengucapkan dua kalimat syahadat</p>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-blue);" data-target="penjelasan2">
+                    <h3>Shalat</h3>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-green);" id="penjelasan2">
+                    <p>Menunaikan shalat lima waktu</p>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-blue);" data-target="penjelasan3">
+                    <h3>Zakat</h3>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-green);" id="penjelasan3">
+                    <p>Mengeluarkan zakat bagi yang mampu</p>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-blue);" data-target="penjelasan4">
+                    <h3>Puasa</h3>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-green);" id="penjelasan4">
+                    <p>Berpuasa di bulan Ramadhan</p>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-blue);" data-target="penjelasan5">
+                    <h3>Haji</h3>
+                </div>
+                
+                <div class="matching-item" style="background-color: var(--light-green);" id="penjelasan5">
+                    <p>Menunaikan ibadah haji ke Mekah</p>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-primary" data-page="home-page">🔙 Menu</button>
+                <button class="btn btn-secondary" data-page="scramble-page">🔤 Scramble Game</button>
+                <button class="btn btn-secondary" data-page="competition-page">🏆 Kuis Kompetisi</button>
+            </div>
+        </div>
+        
+        <!-- Halaman Scramble Game -->
+        <div id="scramble-page" class="page">
+            <div class="header">
+                <h2>Scramble Game</h2>
+                <p>Susun huruf acak menjadi nama Rukun Islam!</p>
+            </div>
+            
+            <div class="scramble-container">
+                <div class="scramble-word" id="scrambled-word">S L A A T</div>
+                
+                <input type="text" class="answer-input" id="scramble-answer" placeholder="Ketik jawabanmu di sini...">
+                
+                <button class="btn btn-primary" id="check-scramble">Periksa Jawaban</button>
+                
+                <div id="scramble-feedback" style="margin-top: 20px; font-weight: bold;"></div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-primary" data-page="home-page">🔙 Menu</button>
+                <button class="btn btn-secondary" data-page="matching-page">🧩 Game Matching</button>
+                <button class="btn btn-secondary" data-page="competition-page">🏆 Kompetisi</button>
+                <button class="btn btn-secondary" data-page="quiz-page">📝 Latihan Soal</button>
+            </div>
+        </div>
+        
+        <!-- Halaman Kuis Kompetisi Dua Pemain -->
+        <div id="competition-page" class="page">
+            <div class="header">
+                <h2>Kuis Kompetisi Dua Pemain</h2>
+                <p>Adu pengetahuan tentang Rukun Islam dengan temanmu!</p>
+            </div>
+            
+            <!-- Notification Area -->
+            <div class="notification-container">
+                <div id="notification" class="notification"></div>
+            </div>
+            
+            <div class="game-container">
+                <div class="player-area player1-area">
+                    <h3>Player 1</h3>
+                    <div class="player-score" id="player1-score">0</div>
+                    <div class="question-area">
+                        <p id="player1-question">Rukun Islam ke-3 adalah ...</p>
+                        <div class="options">
+                            <button class="option-btn" data-player="1" data-answer="A">A. Syahadat</button>
+                            <button class="option-btn" data-player="1" data-answer="B">B. Zakat</button>
+                            <button class="option-btn" data-player="1" data-answer="C">C. Haji</button>
+                            <button class="option-btn" data-player="1" data-answer="D">D. Puasa</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="player-area player2-area">
+                    <h3>Player 2</h3>
+                    <div class="player-score" id="player2-score">0</div>
+                    <div class="question-area">
+                        <p id="player2-question">Rukun Islam ke-3 adalah ...</p>
+                        <div class="options">
+                            <button class="option-btn" data-player="2" data-answer="A">A. Syahadat</button>
+                            <button class="option-btn" data-player="2" data-answer="B">B. Zakat</button>
+                            <button class="option-btn" data-player="2" data-answer="C">C. Haji</button>
+                            <button class="option-btn" data-player="2" data-answer="D">D. Puasa</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- TARIK TAMBANG DIBAWAH JAWABAN -->
+            <div class="tug-of-war-container">
+                <div class="tug-of-war">
+                    <div class="player-indicators">
+                        <span>Player 1</span>
+                        <span>Player 2</span>
+                    </div>
+                    <div class="rope-container">
+                        <div class="rope">
+                            <div class="flag" id="flag">🎏</div>
+                        </div>
+                    </div>
+                    <div class="markers">
+                        <div class="marker"></div>
+                        <div class="marker"></div>
+                        <div class="marker"></div>
+                        <div class="marker"></div>
+                        <div class="marker"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-primary" data-page="home-page">🔙 Menu</button>
+                <button class="btn btn-secondary" data-page="materi-page">📘 Materi</button>
+                <button class="btn btn-secondary" data-page="quiz-page">📝 Latihan Soal</button>
+                <button class="btn btn-primary" id="next-question">Pertanyaan Selanjutnya</button>
+            </div>
+        </div>
+        
+        <!-- Halaman Latihan Soal -->
+        <div id="quiz-page" class="page">
+            <div class="header">
+                <h2>Latihan Soal & Skor Akhir</h2>
+                <p>Uji pengetahuanmu tentang Rukun Islam!</p>
+            </div>
+            
+            <div class="quiz-container">
+                <div class="question-card">
+                    <h3>Soal 1: Rukun Islam ke-3 adalah ...</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-question="0" data-answer="A">A. Syahadat</div>
+                        <div class="quiz-option" data-question="0" data-answer="B">B. Zakat</div>
+                        <div class="quiz-option" data-question="0" data-answer="C">C. Haji</div>
+                        <div class="quiz-option" data-question="0" data-answer="D">D. Puasa</div>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h3>Soal 2: Apa arti syahadat?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-question="1" data-answer="A">A. Bersaksi bahwa tidak ada Tuhan selain Allah dan Muhammad utusan Allah</div>
+                        <div class="quiz-option" data-question="1" data-answer="B">B. Menunaikan shalat lima waktu</div>
+                        <div class="quiz-option" data-question="1" data-answer="C">C. Berpuasa di bulan Ramadhan</div>
+                        <div class="quiz-option" data-question="1" data-answer="D">D. Menunaikan ibadah haji</div>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h3>Soal 3: Siapa yang wajib membayar zakat?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-question="2" data-answer="A">A. Semua muslim tanpa terkecuali</div>
+                        <div class="quiz-option" data-question="2" data-answer="B">B. Hanya orang kaya</div>
+                        <div class="quiz-option" data-question="2" data-answer="C">C. Muslim yang mampu secara finansial</div>
+                        <div class="quiz-option" data-question="2" data-answer="D">D. Hanya laki-laki muslim</div>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h3>Soal 4: Berapa kali shalat wajib dalam sehari?</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-question="3" data-answer="A">A. 3 kali</div>
+                        <div class="quiz-option" data-question="3" data-answer="B">B. 4 kali</div>
+                        <div class="quiz-option" data-question="3" data-answer="C">C. 6 kali</div>
+                        <div class="quiz-option" data-question="3" data-answer="D">D. 5 kali</div>
+                    </div>
+                </div>
+                
+                <div class="question-card">
+                    <h3>Soal 5: Ibadah haji dilaksanakan di ...</h3>
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-question="4" data-answer="A">A. Mekah</div>
+                        <div class="quiz-option" data-question="4" data-answer="B">B. Madinah</div>
+                        <div class="quiz-option" data-question="4" data-answer="C">C. Yerusalem</div>
+                        <div class="quiz-option" data-question="4" data-answer="D">D. Jakarta</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="nav-buttons">
+                <button class="btn btn-primary" data-page="home-page">🔙 Menu</button>
+                <button class="btn btn-secondary" data-page="materi-page">📘 Materi</button>
+                <button class="btn btn-secondary" data-page="competition-page">🏆 Kompetisi</button>
+                <button class="btn btn-primary" id="calculate-score">Hitung Skor</button>
+            </div>
+            
+            <div id="score-result" style="text-align: center; margin-top: 20px; font-weight: bold; font-size: 1.2rem;"></div>
+        </div>
+        
+        <footer>
+            <p>Pakelokgurusdnmegaluh</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
